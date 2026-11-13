@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize branded merchandise and send Shegzi-Tech a saved quote request for apparel, drinkware, bags and stationery.">
+    <title>Build a Product Quote | Shegzi-Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="shegzitechlogo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="customizer.js" defer></script>
+</head>
+
+<body>
+    <!-- BEGIN: Utility bar -->
+    <div class="utility-bar"><div class="utility-inner"><a href="tel:+2348164142389">Call or WhatsApp: +234 816 414 2389</a><span>Free Art Assistance</span><span>100% On-Time Guarantee</span></div></div>
+    <!-- END: Utility bar -->
+
+    <!-- BEGIN: Header and primary navigation -->
+    <header class="site-header"><div class="header-container"><a class="logo-area" href="index.html" aria-label="Shegzi-Tech home"><img src="shegzitechlogo.png" alt="" class="site-logo"><span class="site-name">Shegzi-Tech</span></a><nav class="main-navigation" aria-label="Main navigation"><ul class="nav-list"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="faqs.html" class="nav-link">FAQs</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul></nav></div></header>
+    <!-- END: Header and primary navigation -->
+
+    <main>
+        <!-- BEGIN: Custom quote page introduction -->
+        <section class="page-hero compact-hero">
+            <span class="section-kicker">Make it yours</span>
+            <h1>Build a Custom Product Quote</h1>
+            <p>Choose products, colours, quantities and branding details. Add each item to your quote list and send your request to our team. We’ll confirm pricing, artwork and delivery with you.</p>
+        </section>
+        <!-- END: Custom quote page introduction -->
+
+        <!-- BEGIN: Product customizer and saved quote cart -->
+        <section class="customizer-layout page-section">
+            <section class="customizer-panel" aria-labelledby="customizer-heading">
+                <h2 id="customizer-heading">Customize a product</h2>
+                <p class="customizer-intro">This preview is illustrative. Final materials, branding method, price and turnaround are confirmed in your quote.</p>
+
+                <div class="customizer-preview" aria-live="polite">
+                    <div class="customizer-product" id="customizer-product" data-color="#171717">
+                        <span id="customizer-placeholder">Your logo</span>
+                        <img id="customizer-logo-preview" alt="Preview of your uploaded logo" hidden>
+                    </div>
+                    <p id="customizer-preview-caption">Vacuum Travel Tumbler · Matte Black</p>
+                </div>
+
+                <label for="customizer-product-select">Product</label>
+                <select id="customizer-product-select">
+                    <option value="tumbler">Vacuum Travel Tumbler (500ml)</option>
+                    <option value="polo">Corporate Polo Shirt</option>
+                    <option value="tote">Branded Tote Bag</option>
+                    <option value="notebook">Executive Notebook &amp; Pen</option>
+                </select>
+
+                <p class="customizer-field-label">Product colour</p>
+                <div class="customizer-swatches" role="group" aria-label="Choose product colour">
+                    <button class="customizer-swatch is-selected" type="button" data-color="#171717" data-color-name="Matte Black" aria-label="Matte Black" aria-pressed="true"></button>
+                    <button class="customizer-swatch" type="button" data-color="#f26322" data-color-name="Shegzi Orange" aria-label="Shegzi Orange" aria-pressed="false"></button>
+                    <button class="customizer-swatch" type="button" data-color="#1e3a8a" data-color-name="Navy Blue" aria-label="Navy Blue" aria-pressed="false"></button>
+                    <button class="customizer-swatch swatch-light" type="button" data-color="#f4f4f5" data-color-name="White" aria-label="White" aria-pressed="false"></button>
+                </div>
+
+                <label for="customizer-quantity">Quantity (minimum 10)</label>
+                <input id="customizer-quantity" type="number" min="10" step="5" value="50" inputmode="numeric">
+
+                <label for="customizer-imprint">Branding method</label>
+                <select id="customizer-imprint">
+                    <option value="Please advise">Please advise</option>
+                    <option value="Screen print">Screen print</option>
+                    <option value="Embroidery">Embroidery</option>
+                    <option value="Laser engraving">Laser engraving</option>
+                    <option value="UV or foil print">UV or foil print</option>
+                </select>
+
+                <label for="customizer-speed">Production preference</label>
+                <select id="customizer-speed">
+                    <option value="Standard">Standard timing (confirm in quote)</option>
+                    <option value="Rush requested">Rush service requested (subject to confirmation)</option>
+                </select>
+
+                <label for="customizer-logo-upload">Logo preview (optional)</label>
+                <input id="customizer-logo-upload" type="file" accept="image/png,image/jpeg,image/webp">
+                <p class="customizer-note">The logo preview stays in your browser and is not attached to the request. Send print-ready artwork separately by email or WhatsApp.</p>
+                <button class="btn-primary customizer-add-button" id="customizer-add" type="button">Add to Quote List</button>
+                <p class="customizer-status" id="customizer-status" aria-live="polite"></p>
+            </section>
+
+            <section class="quote-cart-panel" aria-labelledby="quote-cart-heading">
+                <div class="quote-cart-heading">
+                    <div><span class="section-kicker">Your selections</span><h2 id="quote-cart-heading">Quote List <span id="quote-cart-count">(0)</span></h2></div>
+                    <button class="quote-cart-clear" id="quote-cart-clear" type="button" hidden>Clear list</button>
+                </div>
+                <div class="quote-cart-items" id="quote-cart-items" aria-live="polite">
+                    <p class="quote-cart-empty">Your quote list is empty. Add a customized product to get started.</p>
+                </div>
+                <div class="quote-cart-total"><span>Total items</span><strong id="quote-cart-quantity">0</strong></div>
+                <form class="quote-request-form" id="quote-request-form">
+                    <p>Send your selections to our team. We’ll reply with a confirmed quote—there is no online payment or unverified fixed pricing.</p>
+                    <label for="quote-customer-name">Full name</label>
+                    <input id="quote-customer-name" name="name" autocomplete="name" required>
+                    <label for="quote-customer-email">Email address</label>
+                    <input id="quote-customer-email" name="email" type="email" autocomplete="email" required>
+                    <label for="quote-customer-phone">Phone / WhatsApp</label>
+                    <input id="quote-customer-phone" name="phone" type="tel" autocomplete="tel" required>
+                    <label for="quote-delivery-notes">Delivery location or extra details (optional)</label>
+                    <textarea id="quote-delivery-notes" name="deliveryNotes" rows="3"></textarea>
+                    <button class="btn-primary" id="quote-submit" type="submit">Request My Quote</button>
+                    <p class="customizer-status" id="quote-status" aria-live="polite"></p>
+                </form>
+            </section>
+        </section>
+        <!-- END: Product customizer and saved quote cart -->
+    </main>
+
+    <!-- BEGIN: Shared site footer -->
+    <footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a class="logo-area" href="index.html"><img src="shegzitechlogo.png" alt="" class="site-logo"><span class="site-name">Shegzi-Tech</span></a><p>Smart design, precision printing and tech-driven branding solutions under one roof.</p><a href="https://wa.me/2348164142389" class="footer-social">WhatsApp our team</a></div><div><h2>Quick Links</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="portfolio.html">Recent Work</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div><h2>Customer Services</h2><ul><li><a href="guarantee.html">Certainty Guarantee</a></li><li><a href="artwork.html">Artwork Guidelines</a></li><li><a href="faqs.html">FAQs</a></li></ul></div><div><h2>Get In Touch</h2><ul><li>Ogun State, Nigeria</li><li><a href="tel:+2348164142389">+234 816 414 2389</a></li><li><a href="mailto:hello@shegzitech.com">hello@shegzitech.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 Shegzi-Tech. All Rights Reserved.</span><span><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html">Terms of Service</a></span></div></footer>
+    <!-- END: Shared site footer -->
+
+    <!-- BEGIN: Floating quick contact actions -->
+    <div class="floating-contact-actions" aria-label="Quick contact">
+        <a class="floating-contact-button floating-email" href="contact.html#contact-form" aria-label="Send an email enquiry through the contact form" title="Email us">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+        </a>
+        <a class="floating-contact-button floating-whatsapp" href="https://wa.me/2348164142389" target="_blank" rel="noopener noreferrer" aria-label="Chat with Shegzi-Tech on WhatsApp" title="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.5a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2s-1 1.2-1.2 1.4c-.2.2-.4.3-.8.1a10.2 10.2 0 0 1-3-1.9 11.2 11.2 0 0 1-2.1-2.6c-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5s-1.4 1.3-1.4 3.2 1.5 3.7 1.7 4c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.8 1 .3 1.8.2 2.5.1.8-.1 2.2-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z"/></svg>
+        </a>
+    </div>
+    <!-- END: Floating quick contact actions -->
+</body>
+
+</html>

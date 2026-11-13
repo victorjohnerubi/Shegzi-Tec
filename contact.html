@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Shegzi-Tech for design, printing, branded merchandise and custom project quotes in Nigeria.">
+    <title>Contact Us | Shegzi-Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="shegzitechlogo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="site.js" defer></script>
+</head>
+
+<body>
+    <div class="utility-bar"><div class="utility-inner"><a href="tel:+2348164142389">Call or WhatsApp: +234 816 414 2389</a><span>Free Art Assistance</span><span>100% On-Time Guarantee</span></div></div>
+    <!-- BEGIN: Header and primary navigation -->
+    <header class="site-header"><div class="header-container"><a class="logo-area" href="index.html" aria-label="Shegzi-Tech home"><img src="shegzitechlogo.png" alt="" class="site-logo"><span class="site-name">Shegzi-Tech</span></a><nav class="main-navigation" aria-label="Main navigation"><ul class="nav-list"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="faqs.html" class="nav-link">FAQs</a></li><li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li></ul></nav></div></header>
+    <!-- END: Header and primary navigation -->
+    <main>
+        <!-- BEGIN: Contact page introduction -->
+        <section class="page-hero compact-hero"><span class="section-kicker">Contact Shegzi-Tech</span><h1>Let’s Bring Your Vision to Life</h1><p>Have a design project in mind, need a fast print quote, or want to discuss custom branding for your business? Our team is ready to help. Reach out using any of the channels below, and we’ll get back to you promptly.</p></section>
+        <!-- END: Contact page introduction -->
+        <!-- BEGIN: Direct contact details and quote request form -->
+        <section class="contact-layout page-section">
+            <div class="contact-details">
+                <h2>Visit Our Studio &amp; Print Hub</h2>
+                <p>Along Abuja-Keffi Expressway, Nasarawa State</p>
+                <a class="contact-method" href="tel:+2348164142389"><span>Call</span><strong>+234 816 414 2389</strong></a>
+                <a class="contact-method" href="https://wa.me/2348164142389"><span>WhatsApp (fast quotes)</span><strong>Chat with Shegzi-Tech</strong></a>
+                <a class="contact-method" href="mailto:hello@shegzitech.com"><span>General inquiries &amp; orders</span><strong>hello@shegzitech.com</strong></a>
+                <a class="contact-method" href="mailto:print@shegzitech.com"><span>Artwork &amp; file submissions</span><strong>print@shegzitech.com</strong></a>
+                <div class="contact-hours"><h3>Business Hours</h3><p>Monday–Friday: 8:30 AM–6:00 PM<br>Saturday: 9:00 AM–4:00 PM<br>Sunday: Closed</p></div>
+                <div class="contact-hours"><h3>Stay Connected</h3><p>Follow <a href="https://wa.me/2348164142389">@ShegziTech on WhatsApp</a> for project updates and print tips.</p></div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <h2>Send Us a Message</h2>
+                <p class="contact-form-intro">Share your project details and we’ll get back to you as soon as we can.</p>
+                <label for="contact-name">Full name</label><input id="contact-name" name="name" autocomplete="name" placeholder="e.g., Tunde Adeyemi" required>
+                <label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+                <label for="contact-phone">Phone / WhatsApp number</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" required>
+                <label for="contact-service">Service needed</label>
+                <select id="contact-service" name="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Graphic &amp; Brand Design</option>
+                    <option>Business Stationery</option>
+                    <option>Large-Format Printing</option>
+                    <option>Custom Merchandise &amp; Packaging</option>
+                    <option>Other</option>
+                </select>
+                <label for="contact-quantity">Estimated quantity &amp; size</label><input id="contact-quantity" name="quantity" placeholder="e.g., 500 A5 flyers, 2 roll-up banners">
+                <label for="contact-message">Project details</label><textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your idea, deadline and any requirements."></textarea>
+                <label for="contact-artwork">Upload artwork (optional)</label><input id="contact-artwork" name="artwork" type="file" accept=".pdf,.ai,.eps,.png,.jpg,.jpeg">
+                <p class="form-note">To send artwork, attach it in WhatsApp after your message opens, or email it to <a href="mailto:print@shegzitech.com">print@shegzitech.com</a>.</p>
+                <div class="contact-form-actions">
+                    <button class="btn-primary" type="submit">Send Email Request</button>
+                    <button class="btn-primary contact-whatsapp-submit" id="contact-whatsapp-submit" type="button">Send via WhatsApp</button>
+                </div>
+                <p class="form-note" id="contact-status" aria-live="polite">Choose email or WhatsApp to send your project request. Attach artwork separately by email or WhatsApp.</p>
+            </form>
+        </section>
+        <!-- END: Direct contact details and quote request form -->
+    </main>
+    <!-- BEGIN: Shared site footer -->
+    <footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a class="logo-area" href="index.html"><img src="shegzitechlogo.png" alt="" class="site-logo"><span class="site-name">Shegzi-Tech</span></a><p>Smart design, precision printing and tech-driven branding solutions under one roof.</p><a href="https://wa.me/2348164142389" class="footer-social">WhatsApp our team</a></div><div><h2>Quick Links</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="portfolio.html">Recent Work</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div><h2>Customer Services</h2><ul><li><a href="guarantee.html">Certainty Guarantee</a></li><li><a href="artwork.html">Artwork Guidelines</a></li><li><a href="contact.html?service=Sample%20request">Ask about samples</a></li><li><a href="contact.html">Request a quote</a></li></ul></div><div><h2>Get In Touch</h2><ul><li>Abuja-Keffi Expressway, Nasarawa State</li><li><a href="tel:+2348164142389">+234 816 414 2389</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 Shegzi-Tech. All Rights Reserved.</span><span><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp; <a href="artwork.html">Artwork Guidelines</a></span></div></footer>
+    <!-- END: Shared site footer -->
+    <!-- BEGIN: Floating quick contact actions -->
+    <div class="floating-contact-actions" aria-label="Quick contact">
+        <a class="floating-contact-button floating-email" href="contact.html#contact-form" aria-label="Send an email enquiry through the contact form" title="Email us">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+        </a>
+        <a class="floating-contact-button floating-whatsapp" href="https://wa.me/2348164142389" target="_blank" rel="noopener noreferrer" aria-label="Chat with Shegzi-Tech on WhatsApp" title="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.5a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2s-1 1.2-1.2 1.4c-.2.2-.4.3-.8.1a10.2 10.2 0 0 1-3-1.9 11.2 11.2 0 0 1-2.1-2.6c-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5s-1.4 1.3-1.4 3.2 1.5 3.7 1.7 4c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.8 1 .3 1.8.2 2.5.1.8-.1 2.2-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z"/></svg>
+        </a>
+    </div>
+    <!-- END: Floating quick contact actions -->
+</body>
+
+</html>
